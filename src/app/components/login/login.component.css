@@ -1,0 +1,17 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    background-color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.son{
+    height: 30%;
+    width: 30%;
+    background-color: aquamarine;
+    text-align: center;
+    padding-top: 30px;
+   
+    
+}
