@@ -9,7 +9,7 @@ export class LoginService {
 
   constructor(private _httpClient:HttpClient) { }
 
-  login(dat:any): Observable<any>{
+  login(data:any): Observable<any>{
     return this._httpClient.post('https://reqres.in/api/login',data);
 
   }

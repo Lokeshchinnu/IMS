@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +16,19 @@ export class LoginComponent implements OnInit {
     password: new FormControl()
   }
  )
-  constructor() { }
+  constructor(private _loginService:LoginService, private _router:Router) { }
 
   login(){
+    this._loginService.login(this.loginForm.value).subscribe(
+      (data:any)=>{
+        sessionStorage.setItem('ims-token',data.value);
+        this._router.navigateByUrl('/dashboar');
+
+      },
+      (Error:any)=>{
+        alert('internal server error')
+      }
+    )
     
   }
 
