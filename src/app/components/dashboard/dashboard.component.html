@@ -1,1 +1,12 @@
-<p>dashboard works!</p>
+<div class="p">
+    <div class="p1">
+        <h4 routerLink="create-student"> Create Student</h4>
+        <h4 routerLink="all-students"> All Students </h4>
+        <button (click)="logout()"> Logout</button>
+
+    </div>
+    <div class="p2">
+        <router-outlet></router-outlet>
+
+    </div>
+</div>

@@ -7,7 +7,9 @@ import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { FormsModule , ReactiveFormsModule} from '@angular/forms';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common/http';
+import { CreateStudentsComponent } from './components/create-students/create-students.component';
+import { AllStudentsComponent } from './components/all-students/all-students.component'
 
 
 
@@ -17,6 +19,8 @@ import { HttpClientModule} from '@angular/common/http'
     LoginComponent,
     DashboardComponent,
     PagenotfoundComponent,
+    CreateStudentsComponent,
+    AllStudentsComponent,
     
   ],
   imports: [
