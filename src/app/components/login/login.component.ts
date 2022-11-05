@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
     this._loginService.login(this.loginForm.value).subscribe(
       (data:any)=>{
         sessionStorage.setItem('ims-token',data.value);
-        this._router.navigateByUrl('/dashboar');
+        this._router.navigateByUrl('/dashboard');
 
       },
       (Error:any)=>{
