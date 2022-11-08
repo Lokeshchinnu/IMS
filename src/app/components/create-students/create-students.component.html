@@ -81,6 +81,21 @@
 
     </div>
 
+    <button (click)="add()" >Education</button>
+
+    <div formArrayName="education">
+        <div *ngFor="let education of educationFormArray?.controls; let i=index">
+            <div formGroupName="{{i}}" class="col-sm-8">
+                <input type="text" placeholder="qualification" formControlName="qualification">
+                <br>
+                <input type="number" placeholder="year" formControlName="year">
+                <br>
+                <input type="number" placeholder="percentage" formControlName="percentage">
+
+            </div>
+        </div>
+    </div>
+
     <button (click)="submit()"> Submit </button>
 
     

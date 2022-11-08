@@ -21,4 +21,5 @@
     height: 100%;
     width: 80%;
     background-color: aquamarine;
+    overflow: auto;
 }
